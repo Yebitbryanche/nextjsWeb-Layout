@@ -43,7 +43,7 @@ export default function WorkCard({
         "
       >
         {/* Image */}
-        <div className="relative w-full overflow-hidden rounded-md">
+     
           <Image
             src={image_src}
             width={560}
@@ -51,7 +51,7 @@ export default function WorkCard({
             alt={title}
             className="h-auto w-full object-cover"
           />
-        </div>
+      
 
         {/* Resource */}
         <div className="flex w-full flex-col gap-5 sm:flex-row sm:items-start sm:justify-between">
