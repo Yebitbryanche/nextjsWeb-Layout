@@ -1,26 +1,56 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+
+@theme {
+  --color-primary:#9EFF00;
+  --color-secondary:#C5FF66;
+  --color-text:#E6E6E6;
+  --color-gray:#262626;
+  --color-contact:#24242450; 
+  --color-checkbox:#333333;
+  --color-headinggray:#98989A;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+
+.range-slider {
+  position: absolute;
+  width: 100%;
+  height: 50px;
+  top: 0;
+  left: 0;
+  appearance: none;
+  background: transparent;
+  pointer-events: none;
+  outline: none;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* Chrome / Safari / Edge */
+.range-slider::-webkit-slider-thumb {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #9cff00;
+  border: 6px solid #444444;
+  cursor: pointer;
+  pointer-events: auto;
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* Firefox */
+.range-slider::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #9cff00;
+  border: 6px solid #444444;
+  cursor: pointer;
+  pointer-events: auto;
+}
+
+.range-slider::-webkit-slider-runnable-track {
+  background: transparent;
+}
+
+.range-slider::-moz-range-track {
+  background: transparent;
 }
